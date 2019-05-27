@@ -33,9 +33,9 @@ int main()
     NTL::RR harmonic_number{ 1 }; // Holds H_n.
 
     NTL::ZZ number{ 1 };
-    NTL::ZZ MAX_VALUE{ 10000000 }; // Go up to 10,000,000.
+    NTL::ZZ MAX_VALUE{ 1000000000 }; // Go up to 1,000,000,000.
 
-    constexpr bool VERBOSE{ true );
+    constexpr bool VERBOSE{ true };
     
     for( ; number <= MAX_VALUE; ++number )
     {
