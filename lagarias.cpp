@@ -71,14 +71,12 @@ NTL::ZZ sum_of_divisors(NTL::ZZ number)
         if( NTL::divide(number, idx) )
         {
             auto other_divisor = number / idx;
+            
+            sum += idx;
 
-            if( idx == other_divisor )
+            if( idx != other_divisor )
             {   // prevents double counting the square root, if number = idx^2
-                sum += idx;
-            }
-            else
-            {   // Add idx as well as its companion number/idx, as it is also a divisor.
-                sum += idx + other_divisor;
+                sum += other_divisor;
             }
         }
     }
